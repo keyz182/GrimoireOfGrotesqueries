@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef>
+    <defName>GOG_Stampede</defName>
+    <label>Stampede</label>
+    <race>GOG_Stampede</race>
+    <defaultFactionType>Entities</defaultFactionType>
+    <immuneToGameConditionEffects>true</immuneToGameConditionEffects>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/GOG_Stampede/GOG_Stampede</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Devourer/Dessicated_Devourer</texPath> <!-- Placeholder -->
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.2</drawSize>
+          <attachPoints>
+            <li>
+              <offset>(-.4, 0, .85)</offset>
+              <type>PlatformRestraint0</type>
+            </li>
+            <li>
+              <offset>(.45, 0, .85)</offset>
+              <type>PlatformRestraint1</type>
+            </li>
+            <li>
+              <offset>(.5, 0, -.85)</offset>
+              <type>PlatformRestraint2</type>
+            </li>
+            <li>
+              <offset>(-.5, 0, -.85)</offset>
+              <type>PlatformRestraint3</type>
+            </li>
+          </attachPoints>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>250</combatPower>
+    <abilities>
+      <li>ConsumeLeap_Devourer</li>
+    </abilities>
+  </PawnKindDef>
+</Defs>

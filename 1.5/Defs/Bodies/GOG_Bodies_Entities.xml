@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Stampede -->
+
+  <BodyPartDef>
+    <defName>GOG_Stampede_Appendage</defName> <!-- Generic for now, will renamed to stomper, gangly appendage, etc where appropriate -->
+    <label>Appendage</label>
+    <hitPoints>10</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GOG_Stampede_Thorax</defName>
+    <label>Thorax</label>
+    <hitPoints>25</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>true</canScarify>
+    <executionPartPriority>500</executionPartPriority>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <tags>
+      <li>MovingLimbCore</li>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyDef>
+    <defName>GOG_Stampede</defName>
+    <label>Stampede</label>
+    <corePart>
+      <def>GOG_Stampede_Thorax</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>Spine</def>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Stomach</def>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Heart</def>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Lung</def>
+          <customLabel>left lung</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Lung</def>
+          <customLabel>right lung</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Kidney</def>
+          <customLabel>left kidney</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Kidney</def>
+          <customLabel>right kidney</customLabel>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Liver</def>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>Neck</def>
+          <coverage>0.32</coverage>
+          <height>Top</height>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.80</coverage>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.15</coverage>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.7</coverage>
+                      <depth>Inside</depth>
+                    </li>
+                  </parts>
+                </li>
+                <li>
+                  <def>Eye</def>
+                  <customLabel>left eye</customLabel>
+                  <coverage>0.06</coverage>
+                </li>
+                <li>
+                  <def>Eye</def>
+                  <customLabel>right eye</customLabel>
+                  <coverage>0.06</coverage>
+                </li>
+                <li>
+                  <def>Ear</def>
+                  <customLabel>left ear</customLabel>
+                  <coverage>0.06</coverage>
+                </li>
+                <li>
+                  <def>Ear</def>
+                  <customLabel>right ear</customLabel>
+                  <coverage>0.06</coverage>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GOG_Stampede_Appendage</def>
+          <customLabel>left Appendage</customLabel>
+          <coverage>0.06</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>LeftAppendage</li>
+          </groups>
+        </li>
+        <li>
+          <def>GOG_Stampede_Appendage</def>
+          <customLabel>right Appendage</customLabel>
+          <coverage>0.06</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>RightAppendage</li>
+          </groups>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  
+</Defs>
