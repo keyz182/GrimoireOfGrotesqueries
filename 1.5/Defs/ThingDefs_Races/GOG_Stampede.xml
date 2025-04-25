@@ -7,27 +7,30 @@
     <hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
     <statBases>
       <MoveSpeed>4.8</MoveSpeed>
-      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
       <ComfyTemperatureMax>50</ComfyTemperatureMax>
       <PsychicSensitivity>2</PsychicSensitivity>
       <MinimumContainmentStrength>60</MinimumContainmentStrength>
       <LeatherAmount>15</LeatherAmount>
       <MeatAmount>35</MeatAmount>
-      <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.55</ArmorRating_Heat>
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.65</ArmorRating_Heat>
       <ToxicResistance>0.3</ToxicResistance>
     </statBases>
     <tradeability>None</tradeability>
     <race>
+      <deathAction>
+				<workerClass>AnimalBehaviours.DeathActionWorker_DropOnDeath</workerClass>
+			</deathAction>
       <body>GOG_Stampede</body>
       <renderTree>Devourer</renderTree> <!-- Will need custom -->
       <thinkTreeMain>Devourer</thinkTreeMain> <!-- Will need custom for moves -->
       <thinkTreeConstant>DevourerConstant</thinkTreeConstant> <!-- Will need custom for moves -->
       <overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>
       <alwaysViolent>true</alwaysViolent>
-      <baseBodySize>4.5</baseBodySize>
-      <baseHealthScale>7.2</baseHealthScale>
+      <baseBodySize>4.8</baseBodySize>
+      <baseHealthScale>7.5</baseHealthScale>
       <intelligence>ToolUser</intelligence>
       <needsRest>false</needsRest>
       <bloodDef>Filth_DarkBlood</bloodDef>
@@ -93,6 +96,22 @@
         <anomalyKnowledge>2</anomalyKnowledge>
         <requiresHoldingPlatform>true</requiresHoldingPlatform>
       </li>
+      <li Class="AnimalBehaviours.CompProperties_DropOnDeath">
+        <resourceDef>GOG_Mace_Head</resourceDef>
+        <resourceAmount>1</resourceAmount>
+        <dropChance>0.50</dropChance>
+      </li>
+      <li Class="AnimalBehaviours.CompProperties_DropOnDeath">
+        <resourceDef>GOG_Stampede_Legs</resourceDef>
+        <resourceAmount>1</resourceAmount>
+        <dropChance>0.25</dropChance>
+      </li>
+      <comps>
+        <li MayRequire="keyz182.keyzbossbars" Class="AnimalBehaviours.CompProperties_InitialHediff">
+          <hediffname>KBB_BossBar</hediffname>
+          <hediffseverity>1</hediffseverity>
+        </li>
+      </comps>
     </comps>
     <tools>
       <li>

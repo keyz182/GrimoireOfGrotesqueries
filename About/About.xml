@@ -30,5 +30,6 @@
         <li>Ludeon.RimWorld.Biotech</li>
         <li>Ludeon.RimWorld.Anomaly</li>
         <li>oskarpotocki.vanillafactionsexpanded.core</li>
+        <li>keyz182.keyzbossbars</li>
     </loadAfter>
 </ModMetaData>

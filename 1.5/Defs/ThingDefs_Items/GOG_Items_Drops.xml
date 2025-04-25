@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Stampede Drops -->
+  <ThingDef ParentName="ResourceVerbBase">
+    <defName>GOG_Mace_Head</defName>
+    <label>Flayed Mace Head</label>
+    <description>A wet and spongey spinal column harvested from a Stampede. The flesh covering the skull within dissolved after death. Inedible and uncomfortable to look at for too long.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/GOG_Stampede_Drops/GOG_Mace_Head</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <equippedAngleOffset>-80</equippedAngleOffset>
+    <statBases>
+      <MarketValue>80</MarketValue>  <!-- Same as an elephant tusk -->
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>1.2</Mass>
+      <Flammability>0.9</Flammability>
+      <DeteriorationRate>0.95</DeteriorationRate> <!-- Super high, it's a disembodied head afterall -->
+    </statBases>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Blunt</li>
+        </capacities>
+        <power>22.5</power>
+        <cooldownTime>3.5</cooldownTime>
+      </li>
+    </tools>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>AnimalPart</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceVerbBase">
+    <defName>GOG_Stampede_Legs</defName>
+    <label>Ichorous Leg Bones</label>
+    <description>Hard, obsidian-esc bones harvested from the clunky exoskeletal legs of the Stampede. Hefty and unwieldy to carry around.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/GOG_Stampede_Drops/GOG_Stampede_Legs</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>120</MarketValue>  <!-- Same as an elephant tusk -->
+      <MaxHitPoints>250</MaxHitPoints>
+      <Mass>2.5</Mass>
+      <Flammability>0.9</Flammability>
+      <DeteriorationRate>0.15</DeteriorationRate>
+    </statBases>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>AnimalPart</li>
+    </thingSetMakerTags>
+  </ThingDef>
+</Defs>

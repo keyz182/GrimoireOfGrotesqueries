@@ -52,25 +52,13 @@
         </li>
         <li>
           <def>Lung</def>
-          <customLabel>left lung</customLabel>
-          <coverage>0.03</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>Lung</def>
-          <customLabel>right lung</customLabel>
+          <customLabel>Mono Lung</customLabel>
           <coverage>0.03</coverage>
           <depth>Inside</depth>
         </li>
         <li>
           <def>Kidney</def>
-          <customLabel>left kidney</customLabel>
-          <coverage>0.03</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>Kidney</def>
-          <customLabel>right kidney</customLabel>
+          <customLabel>Bile Sack</customLabel>
           <coverage>0.03</coverage>
           <depth>Inside</depth>
         </li>
