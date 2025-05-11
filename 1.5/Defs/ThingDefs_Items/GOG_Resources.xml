@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GOG_Beastial_Runoff</defName>
+    <label>Beastial Runoff</label>
+    <description>A rather unpleasant semi-solid glob of mucus that was sloughed of a void beast. It smells of iron and copper and glistens like eyeballs as it solidifys.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/GOG_General_Items/GOG_Beastial_Runoff</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>8</MarketValue>  <!-- Same as an elephant tusk -->
+      <MaxHitPoints>25</MaxHitPoints>
+      <Mass>0.3</Mass>
+      <Flammability>0.95</Flammability>
+      <DeteriorationRate>0.95</DeteriorationRate>
+    </statBases>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>10</stackLimit>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+    <defName>GOG_Whisp_Pith</defName>
+    <label>Whisp Pith</label>
+    <description>A self contained, bitingly cold whorl of void blood. Vapor swirls of multi-shaded blue coil in the air and let off a smell that is indescribable. Despite being gaseous, it can be picked up bare handed and placed into whatever vessel you see fit. Might bite if you hold it for too long.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/GOG_General_Items/GOG_Whisp_Pith</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <MaxHitPoints>25</MaxHitPoints>
+      <Mass>0.1</Mass>  <!--It's Gas-->
+      <Flammability>0.0</Flammability>  <!--It's Gas-->
+      <DeteriorationRate>0.99</DeteriorationRate> <!--It's Gas-->
+    </statBases>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>50</stackLimit>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

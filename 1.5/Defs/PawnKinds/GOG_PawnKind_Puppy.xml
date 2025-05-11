@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <PawnKindDef>
+        <defName>GOG_Puppy</defName>
+        <label>Osiris Puppy</label>
+        <race>GOG_Puppy</race>
+        <defaultFactionType>Entities</defaultFactionType>
+        <immuneToGameConditionEffects>true</immuneToGameConditionEffects>
+        <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/GOG_Puppy/GOG_Puppy</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>3.2</drawSize>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Devourer/Dessicated_Devourer</texPath> <!-- Placeholder -->
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>3.2</drawSize>
+                    <attachPoints>
+                        <li>
+                            <offset>(-.4, 0, .85)</offset>
+                            <type>PlatformRestraint0</type>
+                        </li>
+                        <li>
+                            <offset>(.45, 0, .85)</offset>
+                            <type>PlatformRestraint1</type>
+                        </li>
+                        <li>
+                            <offset>(.5, 0, -.85)</offset>
+                            <type>PlatformRestraint2</type>
+                        </li>
+                        <li>
+                            <offset>(-.5, 0, -.85)</offset>
+                            <type>PlatformRestraint3</type>
+                        </li>
+                    </attachPoints>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+        <combatPower>250</combatPower>
+        <abilities>
+        </abilities>
+    </PawnKindDef>
+</Defs>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>GOG_Ochres</defName>
+    <label>Blood Ochres</label>
+    <description>A thick, cloudy red liquid that smells earthy and fermented. Sits in a woven net so it can be easily tied and carried at the waist. It has a pleasantly indescribable taste that combats the disturbing texture, and goes down smooth.</description>
+    <descriptionHyperlinks>
+      <HediffDef>GOG_OchreEffect</HediffDef>
+      <HediffDef>PsychiteTolerance</HediffDef> <!--Needs custom tolerance-->
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/GOG_General_Items/GOG_Ochres</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>400</WorkToMake>
+      <MarketValue>10</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>0.1</DeteriorationRate>
+      <Nutrition>0.5</Nutrition> <!-- Simple meal is 0.9 -->
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.05</joy>
+      <baseIngestTicks>210</baseIngestTicks>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Drink</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>GOG_OchreEffect</hediffDef>
+          <severity>1.0</severity>
+          <toleranceChemical>Psychite</toleranceChemical>  <!-- Needs custom chemical -->
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.1</offset>
+          <toleranceChemical>Psychite</toleranceChemical>  <!-- Needs custom chemical -->
+        </li>
+        <!-- <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>GOG_OchreTolerance</hediffDef>
+          <toleranceChemical>Psychite</toleranceChemical>
+          <severity>0.03</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li> -->
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>DrugProduction</researchPrerequisite> <!-- Placeholder, probably want custom?-->
+      <recipeUsers>
+        <li>DrugLab</li>
+        <li>ElectricStove</li>
+        <li>FueledStove</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <skillRequirements>
+        <Cooking>4</Cooking>
+      </skillRequirements>
+      <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+      <displayPriority>1460</displayPriority>
+      <bulkRecipeCount>10</bulkRecipeCount>
+    </recipeMaker>
+    <costList>
+      <GOG_Beastial_Runoff>25</GOG_Beastial_Runoff>
+      <MedicineHerbal>1</MedicineHerbal>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Psychite</chemical>
+        <addictiveness>0.02</addictiveness>
+        <minToleranceToAddict>0.10</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.15</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>110</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>GOG_OchreEffect</defName>
+    <label>Blood Ochre Warmth</label>
+    <labelNoun>Ochre Warmth</labelNoun>
+    <description>Blood Ochre is present in the bloodstream. Bleeding wounds close faster, and healing is far more rapid.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-6.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+     <stages>
+      <li>
+        <totalBleedFactor>0.5</totalBleedFactor>
+        <naturalHealingFactor>1.5</naturalHealingFactor>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

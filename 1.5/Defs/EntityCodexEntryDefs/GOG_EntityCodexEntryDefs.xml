@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EntityCodexEntryDef>
+    <defName>GOG_Stampede</defName>
+    <label>Stampede</label>
+    <category>Advanced</category>
+    <useDescriptionFrom>Stampede</useDescriptionFrom>
+    <uiIconPath>UI/CodexEntries/Stampede</uiIconPath>
+    <discoveryType>Unfog</discoveryType>
+    <linkedThings>
+      <li>GOG_Stampede</li>
+    </linkedThings>
+    <!-- <discoveredResearchProjects>
+      <li>SummonPitGate</li>
+    </discoveredResearchProjects> -->
+    <!-- <provocationIncidents>
+      <li>PitGate</li>
+    </provocationIncidents> -->
+    <orderInCategory>100</orderInCategory>
+  </EntityCodexEntryDef>
+  <EntityCodexEntryDef>
+    <defName>GOG_Puppy</defName>
+    <label>Puppy</label>
+    <category>Basic</category>
+    <useDescriptionFrom>Puppy</useDescriptionFrom>
+    <uiIconPath>UI/CodexEntries/Puppy</uiIconPath>
+    <discoveryType>Unfog</discoveryType>
+    <linkedThings>
+      <li>GOG_Puppy</li>
+    </linkedThings>
+    <!-- <discoveredResearchProjects>
+      <li>SummonPitGate</li>
+    </discoveredResearchProjects> -->
+    <!-- <provocationIncidents>
+      <li>PitGate</li>
+    </provocationIncidents> -->
+    <orderInCategory>100</orderInCategory>
+  </EntityCodexEntryDef>
+</Defs>

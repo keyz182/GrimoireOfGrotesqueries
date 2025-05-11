@@ -46,7 +46,7 @@
     </thingSetMakerTags>
   </ThingDef>
 
-  <ThingDef ParentName="ResourceVerbBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>GOG_Stampede_Legs</defName>
     <label>Ichorous Leg Bones</label>
     <description>Hard, obsidian-esc bones harvested from the clunky exoskeletal legs of the Stampede. Hefty and unwieldy to carry around.</description>
@@ -75,4 +75,37 @@
       <li>AnimalPart</li>
     </thingSetMakerTags>
   </ThingDef>
+
+  <!-- Puppy Drops -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GOG_Dentata</defName>
+    <label>Pup Dentata</label>
+    <description>One of the many jaw pieces hiding in the near endless maw of a Osiris Puppy. The teeth are still sharp.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/GOG_Puppy_Drops/GOG_Dentata</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>80</MarketValue>  <!-- Same as an elephant tusk -->
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>1.2</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>AnimalPart</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
 </Defs>

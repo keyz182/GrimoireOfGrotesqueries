@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="BasePawn">
+        <defName>GOG_Puppy</defName>
+        <label>Puppy</label>
+        <description>Some cruel mockery of man's best friend. The way its body moves makes it difficult to believe it has any bones outside of what's in its nearly see-through stomach. Its permanent smile doesn't fade in the slightest, and will take great joy in tearing your pawns apart.</description>
+        <hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
+        <statBases>
+            <MoveSpeed>2.8</MoveSpeed>
+            <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+            <ComfyTemperatureMax>35</ComfyTemperatureMax>
+            <PsychicSensitivity>2</PsychicSensitivity>
+            <MinimumContainmentStrength>85</MinimumContainmentStrength>
+            <LeatherAmount>45</LeatherAmount>
+            <MeatAmount>70</MeatAmount>
+            <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.35</ArmorRating_Heat>
+            <ToxicResistance>0.3</ToxicResistance>
+        </statBases>
+        <tradeability>None</tradeability>
+        <race>
+            <deathAction>
+                <workerClass>AnimalBehaviours.DeathActionWorker_DropOnDeath</workerClass>
+            </deathAction>
+            <baseHealthScale>3</baseHealthScale>
+            <body>QuadrupedAnimalWithPaws</body>
+            <baseBodySize>3.00</baseBodySize>
+            <leatherDef>Leather_Dread</leatherDef>
+            <needsRest>false</needsRest>
+            <fleshType>EntityFlesh</fleshType>
+            <isImmuneToInfections>true</isImmuneToInfections>
+            <specificMeatDef>Meat_Twisted</specificMeatDef>
+            <foodType>None</foodType>
+            <bloodDef>Filth_DarkBlood</bloodDef>
+            <bleedRateFactor>0.3</bleedRateFactor>
+            <thinkTreeMain>Chimera</thinkTreeMain>      <!--Will need custom-->
+            <thinkTreeConstant>ChimeraConstant</thinkTreeConstant>
+            <trainability>None</trainability>
+            <canBecomeShambler>true</canBecomeShambler>
+            <lifeStageAges>
+                <li>
+                <def>EntityFullyFormed</def>
+                <soundCall>Pawn_Chimera_Call</soundCall>            <!--Will need custom-->
+                <soundWounded>Pawn_Chimera_Wounded</soundWounded>           
+                <soundDeath>Pawn_Chimera_Death</soundDeath>
+                </li>
+            </lifeStageAges>
+            <hediffGiverSets>
+                <li>AnomalyEntity</li>
+            </hediffGiverSets>
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+            <headPosPerRotation>
+                <li>(0.0, 0, 0.2)</li>
+                <li>(0.3, 0, 0.1)</li>
+                <li>(0.0, 0, -0.06)</li>
+                <li>(-0.3, 0, 0.1)</li>
+            </headPosPerRotation>
+            <hasGenders>false</hasGenders>
+            <corpseHiddenWhileUndiscovered>true</corpseHiddenWhileUndiscovered>
+        </race>
+        <uiIconScale>1.15</uiIconScale>
+        <tools>
+        <!-- <li>
+            <label>left claw</label>
+            <labelNoLocation>claw</labelNoLocation>
+            <capacities>
+            <li>Scratch</li>
+            </capacities>
+            <power>17</power>
+            <cooldownTime>2</cooldownTime>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+            <surpriseAttack>
+            <extraMeleeDamages>
+                <li>
+                <def>Stun</def>
+                <amount>14</amount>
+                </li>
+            </extraMeleeDamages>
+            </surpriseAttack>
+        </li>
+        <li>
+            <label>right claw</label>
+            <labelNoLocation>claw</labelNoLocation>
+            <capacities>
+            <li>Scratch</li>
+            </capacities>
+            <power>17</power>
+            <cooldownTime>2</cooldownTime>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+            <surpriseAttack>
+            <extraMeleeDamages>
+                <li>
+                <def>Stun</def>
+                <amount>14</amount>
+                </li>
+            </extraMeleeDamages>
+            </surpriseAttack>
+        </li> -->
+        <li>
+            <capacities>
+            <li>Bite</li>
+            </capacities>
+            <power>30.6</power>
+            <cooldownTime>3.6</cooldownTime>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+            <chanceFactor>0.5</chanceFactor>
+            <surpriseAttack>
+            <extraMeleeDamages>
+                <li>
+                <def>Stun</def>
+                <amount>14</amount>
+                </li>
+            </extraMeleeDamages>
+            </surpriseAttack>
+        </li>
+        <li>
+            <label>head</label>
+            <capacities>
+            <li>Blunt</li>
+            </capacities>
+            <power>14</power>
+            <cooldownTime>2.3</cooldownTime>
+            <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+            <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+            <chanceFactor>0.2</chanceFactor>
+        </li>
+        </tools>
+        <comps Inherit="False">
+        <li>
+            <compClass>CompAttachBase</compClass>
+        </li>
+        <li Class="CompProperties_Studiable">
+            <frequencyTicks>120000</frequencyTicks>
+            <knowledgeCategory>Advanced</knowledgeCategory>
+            <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+            <anomalyKnowledge>1</anomalyKnowledge>
+            <requiresHoldingPlatform>true</requiresHoldingPlatform>
+        </li>
+        <li Class="CompProperties_HoldingPlatformTarget">
+            <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
+        </li>
+        
+        <li Class="CompProperties_AttachPoints">
+            <points>
+            <li>
+                <offset>(-.6, 0, .6)</offset>
+                <type>PlatformRestraint0</type>
+            </li>
+            <li>
+                <offset>(.6, 0, .6)</offset>
+                <type>PlatformRestraint1</type>
+            </li>
+            <li>
+                <offset>(.6, 0, -.7)</offset>
+                <type>PlatformRestraint2</type>
+            </li>
+            <li>
+                <offset>(-.6, 0, -.7)</offset>
+                <type>PlatformRestraint3</type>
+            </li>
+            </points>
+        </li>
+        <li Class="CompProperties_ProducesBioferrite">
+            <bioferriteDensity>1.5</bioferriteDensity>
+        </li>
+        </comps>
+    </ThingDef>
+</Defs>
