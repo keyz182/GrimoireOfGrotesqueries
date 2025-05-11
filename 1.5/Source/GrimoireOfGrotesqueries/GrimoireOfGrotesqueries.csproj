@@ -65,4 +65,9 @@
 
     <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="..\..\..\Compatibility\">
+      <Link>GrimoireOfGrotesqueries\Compatibility</Link>
+    </Folder>
+  </ItemGroup>
 </Project>
