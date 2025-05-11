@@ -117,12 +117,10 @@
                 <resourceAmount>1</resourceAmount>
                 <dropChance>0.25</dropChance>
             </li>
-            <comps>
-                <li MayRequire="keyz182.keyzbossbars" Class="AnimalBehaviours.CompProperties_InitialHediff">
-                    <hediffname>KBB_BossBar</hediffname>
-                    <hediffseverity>1</hediffseverity>
-                </li>
-            </comps>
+            <li MayRequire="keyz182.KeyzBossBars" Class="AnimalBehaviours.CompProperties_InitialHediff">
+                <hediffname>KBB_BossBar</hediffname>
+                <hediffseverity>0.5</hediffseverity>
+            </li>
         </comps>
         <tools>
             <li>
