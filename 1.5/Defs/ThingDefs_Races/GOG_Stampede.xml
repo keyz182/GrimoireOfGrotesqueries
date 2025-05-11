@@ -1,141 +1,152 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
-  <ThingDef ParentName="BasePawn">
-    <defName>GOG_Stampede</defName>
-    <label>Stampede</label>
-    <description>A surreal beast from some odd fold of the void. Its gangly torso writhes and swings with every heavy stomp. Within its footpath lay stinking ooze, trampled beasts and buildings. A wise pawn would think twice than to stand in its way for too long.</description>
-    <hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
-    <statBases>
-      <MoveSpeed>4.8</MoveSpeed>
-      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
-      <ComfyTemperatureMax>50</ComfyTemperatureMax>
-      <PsychicSensitivity>2</PsychicSensitivity>
-      <MinimumContainmentStrength>60</MinimumContainmentStrength>
-      <LeatherAmount>15</LeatherAmount>
-      <MeatAmount>35</MeatAmount>
-      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.65</ArmorRating_Heat>
-      <ToxicResistance>0.3</ToxicResistance>
-    </statBases>
-    <tradeability>None</tradeability>
-    <race>
-      <deathAction>
-				<workerClass>AnimalBehaviours.DeathActionWorker_DropOnDeath</workerClass>
-			</deathAction>
-      <body>GOG_Stampede</body>
-      <renderTree>Devourer</renderTree> <!-- Will need custom -->
-      <thinkTreeMain>Devourer</thinkTreeMain> <!-- Will need custom for moves -->
-      <thinkTreeConstant>DevourerConstant</thinkTreeConstant> <!-- Will need custom for moves -->
-      <overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>
-      <alwaysViolent>true</alwaysViolent>
-      <baseBodySize>4.8</baseBodySize>
-      <baseHealthScale>7.5</baseHealthScale>
-      <intelligence>ToolUser</intelligence>
-      <needsRest>false</needsRest>
-      <bloodDef>Filth_DarkBlood</bloodDef>
-      <bleedRateFactor>0.5</bleedRateFactor>
-      <fleshType>EntityFlesh</fleshType>
-      <isImmuneToInfections>true</isImmuneToInfections>
-      <specificMeatDef>Meat_Twisted</specificMeatDef>
-      <leatherDef>Leather_Dread</leatherDef>
-      <hasGenders>false</hasGenders>
-      <foodType>None</foodType>
-      <lifeExpectancy>200</lifeExpectancy>
-      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
-      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
-      <disableIgniteVerb>true</disableIgniteVerb>
-      <trainability>None</trainability>
-      <canBecomeShambler>false</canBecomeShambler>
-      <lifeStageAges>
-        <li>
-          <def>EntityFullyFormed</def>
-          <soundCall>Pawn_Devourer_Call</soundCall>
-          <soundWounded>Pawn_Devourer_Wounded</soundWounded>
-          <soundAttack>Pawn_Devourer_Attack</soundAttack>
-        </li>
-      </lifeStageAges>
-      <hediffGiverSets>
-        <li>AnomalyEntity</li>
-      </hediffGiverSets>
-      <corpseHiddenWhileUndiscovered>true</corpseHiddenWhileUndiscovered>
-    </race>
-    <comps>
-      <li Class="CompProperties_HoldingPlatformTarget">
-        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
-      </li>
-      <li Class="CompProperties_AttachPoints">
-        <points>
-          <li>
-            <offset>(-.50, 0, .65)</offset>
-            <type>PlatformRestraint0</type>
-          </li>
-          <li> 
-            <offset>(.50, 0, .65)</offset>
-            <type>PlatformRestraint1</type>
-          </li>
-          <li> 
-            <offset>(.65, 0, -.65)</offset>
-            <type>PlatformRestraint2</type>
-          </li>
-          <li>
-            <offset>(-.65, 0, -.65)</offset>
-            <type>PlatformRestraint3</type>
-          </li>
-        </points>
-      </li>
-      <li Class="CompProperties_ProducesBioferrite"> <!-- Placeholder for Hinus' custom product -->
-        <bioferriteDensity>1</bioferriteDensity>
-      </li>
-      <li Class="CompProperties_Studiable">
-        <frequencyTicks>120000</frequencyTicks>
-        <knowledgeCategory>Advanced</knowledgeCategory>
-        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
-        <anomalyKnowledge>2</anomalyKnowledge>
-        <requiresHoldingPlatform>true</requiresHoldingPlatform>
-      </li>
-      <li Class="AnimalBehaviours.CompProperties_DropOnDeath">
-        <resourceDef>GOG_Mace_Head</resourceDef>
-        <resourceAmount>1</resourceAmount>
-        <dropChance>0.50</dropChance>
-      </li>
-      <li Class="AnimalBehaviours.CompProperties_DropOnDeath">
-        <resourceDef>GOG_Stampede_Legs</resourceDef>
-        <resourceAmount>1</resourceAmount>
-        <dropChance>0.25</dropChance>
-      </li>
-      <comps>
-        <li MayRequire="keyz182.keyzbossbars" Class="AnimalBehaviours.CompProperties_InitialHediff">
-          <hediffname>KBB_BossBar</hediffname>
-          <hediffseverity>1</hediffseverity>
-        </li>
-      </comps>
-    </comps>
-    <tools>
-      <li>
-        <label>left Appendage</label>
-        <labelNoLocation>Appendage</labelNoLocation>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12</power> <!-- Quite intense, might need reduction -->
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>LeftAppendage</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right Appendage</label>
-        <labelNoLocation>Appendage</labelNoLocation>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12</power> <!-- Quite intense, might need reduction -->
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>RightAppendage</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-    </tools>
-  </ThingDef>
+    <ThingDef ParentName="PawnFlyerBase">
+        <defName>GOG_Stampede_PawnFlyer</defName>
+        <thingClass>GrimoireOfGrotesqueries.ShovingPawnFlyer</thingClass>
+        <pawnFlyer>
+            <flightDurationMin>1</flightDurationMin>
+            <flightSpeed>10</flightSpeed>
+            <heightFactor>1</heightFactor>
+        </pawnFlyer>
+    </ThingDef>
+
+    <ThingDef ParentName="BasePawn">
+        <defName>GOG_Stampede</defName>
+        <label>Stampede</label>
+        <description>A surreal beast from some odd fold of the void. Its gangly torso writhes and swings with every heavy stomp. Within its footpath lay stinking ooze, trampled beasts and buildings. A wise pawn would think twice than to stand in its way for too long.</description>
+        <hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
+        <statBases>
+            <MoveSpeed>4.8</MoveSpeed>
+            <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+            <PsychicSensitivity>2</PsychicSensitivity>
+            <MinimumContainmentStrength>60</MinimumContainmentStrength>
+            <LeatherAmount>15</LeatherAmount>
+            <MeatAmount>35</MeatAmount>
+            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.65</ArmorRating_Heat>
+            <ToxicResistance>0.3</ToxicResistance>
+        </statBases>
+        <tradeability>None</tradeability>
+        <race>
+            <deathAction>
+                <workerClass>AnimalBehaviours.DeathActionWorker_DropOnDeath</workerClass>
+            </deathAction>
+            <body>GOG_Stampede</body>
+            <renderTree>Devourer</renderTree> <!-- Will need custom -->
+            <thinkTreeMain>Devourer</thinkTreeMain> <!-- Will need custom for moves -->
+            <thinkTreeConstant>DevourerConstant</thinkTreeConstant> <!-- Will need custom for moves -->
+            <overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>
+            <alwaysViolent>true</alwaysViolent>
+            <baseBodySize>4.8</baseBodySize>
+            <baseHealthScale>7.5</baseHealthScale>
+            <intelligence>ToolUser</intelligence>
+            <needsRest>false</needsRest>
+            <bloodDef>Filth_DarkBlood</bloodDef>
+            <bleedRateFactor>0.5</bleedRateFactor>
+            <fleshType>EntityFlesh</fleshType>
+            <isImmuneToInfections>true</isImmuneToInfections>
+            <specificMeatDef>Meat_Twisted</specificMeatDef>
+            <leatherDef>Leather_Dread</leatherDef>
+            <hasGenders>false</hasGenders>
+            <foodType>None</foodType>
+            <lifeExpectancy>200</lifeExpectancy>
+            <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+            <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+            <disableIgniteVerb>true</disableIgniteVerb>
+            <trainability>None</trainability>
+            <canBecomeShambler>false</canBecomeShambler>
+            <lifeStageAges>
+                <li>
+                    <def>EntityFullyFormed</def>
+                    <soundCall>Pawn_Devourer_Call</soundCall>
+                    <soundWounded>Pawn_Devourer_Wounded</soundWounded>
+                    <soundAttack>Pawn_Devourer_Attack</soundAttack>
+                </li>
+            </lifeStageAges>
+            <hediffGiverSets>
+                <li>AnomalyEntity</li>
+            </hediffGiverSets>
+            <corpseHiddenWhileUndiscovered>true</corpseHiddenWhileUndiscovered>
+        </race>
+        <comps>
+            <li Class="CompProperties_HoldingPlatformTarget">
+                <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
+            </li>
+            <li Class="CompProperties_AttachPoints">
+                <points>
+                    <li>
+                        <offset>(-.50, 0, .65)</offset>
+                        <type>PlatformRestraint0</type>
+                    </li>
+                    <li>
+                        <offset>(.50, 0, .65)</offset>
+                        <type>PlatformRestraint1</type>
+                    </li>
+                    <li>
+                        <offset>(.65, 0, -.65)</offset>
+                        <type>PlatformRestraint2</type>
+                    </li>
+                    <li>
+                        <offset>(-.65, 0, -.65)</offset>
+                        <type>PlatformRestraint3</type>
+                    </li>
+                </points>
+            </li>
+            <li Class="CompProperties_ProducesBioferrite"> <!-- Placeholder for Hinus' custom product -->
+                <bioferriteDensity>1</bioferriteDensity>
+            </li>
+            <li Class="CompProperties_Studiable">
+                <frequencyTicks>120000</frequencyTicks>
+                <knowledgeCategory>Advanced</knowledgeCategory>
+                <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+                <anomalyKnowledge>2</anomalyKnowledge>
+                <requiresHoldingPlatform>true</requiresHoldingPlatform>
+            </li>
+            <li Class="AnimalBehaviours.CompProperties_DropOnDeath">
+                <resourceDef>GOG_Mace_Head</resourceDef>
+                <resourceAmount>1</resourceAmount>
+                <dropChance>0.50</dropChance>
+            </li>
+            <li Class="AnimalBehaviours.CompProperties_DropOnDeath">
+                <resourceDef>GOG_Stampede_Legs</resourceDef>
+                <resourceAmount>1</resourceAmount>
+                <dropChance>0.25</dropChance>
+            </li>
+            <comps>
+                <li MayRequire="keyz182.keyzbossbars" Class="AnimalBehaviours.CompProperties_InitialHediff">
+                    <hediffname>KBB_BossBar</hediffname>
+                    <hediffseverity>1</hediffseverity>
+                </li>
+            </comps>
+        </comps>
+        <tools>
+            <li>
+                <label>left Appendage</label>
+                <labelNoLocation>Appendage</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power> <!-- Quite intense, might need reduction -->
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>LeftAppendage</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>right Appendage</label>
+                <labelNoLocation>Appendage</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power> <!-- Quite intense, might need reduction -->
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>RightAppendage</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+        </tools>
+    </ThingDef>
 </Defs>

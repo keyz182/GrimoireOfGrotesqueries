@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <!-- GOG_Stampede_Powerup -->
+
+
+    <SoundDef>
+        <defName>GOG_Stampede_Powerup</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>5</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <sustain>True</sustain>
+        <sustainFadeoutTime>0.1</sustainFadeoutTime>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>GOG_Stampede_Powerup</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>50</volumeRange>
+                <pitchRange>0.9~1.1</pitchRange>
+                <muteWhenPaused>True</muteWhenPaused>
+            </li>
+        </subSounds>
+    </SoundDef>
+</Defs>

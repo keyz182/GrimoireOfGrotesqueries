@@ -64,6 +64,14 @@
     <CompatibilityFiles Include="../../../Compatibility/**" />
 
     <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md" />
+
+    <ReleaseFiles Update="..\..\Defs\Effects\GOG_Motes.xml">
+      <Link>GrimoireOfGrotesqueries\1.5\Defs\Effects\GOG_Motes.xml</Link>
+    </ReleaseFiles>
+
+    <ReleaseFiles Update="..\..\Defs\Sounds\GOG_Sounds.xml">
+      <Link>GrimoireOfGrotesqueries\1.5\Defs\Sounds\GOG_Sounds.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="..\..\..\Compatibility\">

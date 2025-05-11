@@ -36,3 +36,5 @@ Portions of the materials used to create this content/mod are trademarks and/or 
 ## Thanks
 * Ludeon for the Game
 * Marnador for the [Rimworld Font](https://github.com/spdskatr/RWModdingResources/raw/master/RimWordFont.ttf)
+* seismicLoop1.wav by nicStage -- https://freesound.org/s/1912/ -- License: Attribution 4.0
+* Rockfall (7lrs,grnlzr,Eq) 2.wav by newlocknew -- https://freesound.org/s/497206/ -- License: Attribution 4.0

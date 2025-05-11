@@ -10,5 +10,7 @@ public static class GrimoireOfGrotesqueriesDefOf
     // [MayRequireBiotech]
     // public static GeneDef YourPrefix_YourGeneDefName;
 
+    public static ThingDef GOG_Stampede_PawnFlyer;
+
     static GrimoireOfGrotesqueriesDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(GrimoireOfGrotesqueriesDefOf));
 }
