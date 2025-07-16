@@ -32,13 +32,12 @@
         <tradeability>None</tradeability>
         <race>
             <deathAction>
-                <workerClass>AnimalBehaviours.DeathActionWorker_DropOnDeath</workerClass>
+                <workerClass>VEF.AnimalBehaviours.DeathActionWorker_DropOnDeath</workerClass>
             </deathAction>
             <body>GOG_Stampede</body>
             <renderTree>Devourer</renderTree> <!-- Will need custom -->
             <thinkTreeMain>Devourer</thinkTreeMain> <!-- Will need custom for moves -->
             <thinkTreeConstant>DevourerConstant</thinkTreeConstant> <!-- Will need custom for moves -->
-            <overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>
             <alwaysViolent>true</alwaysViolent>
             <baseBodySize>4.8</baseBodySize>
             <baseHealthScale>7.5</baseHealthScale>
@@ -107,19 +106,21 @@
                 <anomalyKnowledge>2</anomalyKnowledge>
                 <requiresHoldingPlatform>true</requiresHoldingPlatform>
             </li>
-            <li Class="AnimalBehaviours.CompProperties_DropOnDeath">
+            <li Class="VEF.AnimalBehaviours.CompProperties_DropOnDeath">
                 <resourceDef>GOG_Mace_Head</resourceDef>
                 <resourceAmount>1</resourceAmount>
                 <dropChance>0.50</dropChance>
             </li>
-            <li Class="AnimalBehaviours.CompProperties_DropOnDeath">
+            <li Class="VEF.AnimalBehaviours.CompProperties_DropOnDeath">
                 <resourceDef>GOG_Stampede_Legs</resourceDef>
                 <resourceAmount>1</resourceAmount>
                 <dropChance>0.25</dropChance>
             </li>
-            <li MayRequire="keyz182.KeyzBossBars" Class="AnimalBehaviours.CompProperties_InitialHediff">
+            <li MayRequire="keyz182.KeyzBossBars" Class="KeyzBossBars.CompProperties_BossBar">
                 <hediffname>KBB_BossBar</hediffname>
                 <hediffseverity>0.5</hediffseverity>
+            </li>
+            <li Class="GrimoireOfGrotesqueries.CompProperties_StrangeWalker">
             </li>
         </comps>
         <tools>

@@ -23,4 +23,21 @@
             </li>
         </subSounds>
     </SoundDef>
+
+    <SoundDef>
+        <defName>GOG_StrangeWalker</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>3</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>StrangeWalker</clipFolderPath>
+                    </li>
+                </grains>
+                <volumeRange>20~25</volumeRange>
+                <pitchRange>0.9~1.1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
 </Defs>

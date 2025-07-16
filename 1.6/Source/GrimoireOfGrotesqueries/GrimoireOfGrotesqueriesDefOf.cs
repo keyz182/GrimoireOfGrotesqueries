@@ -11,6 +11,7 @@ public static class GrimoireOfGrotesqueriesDefOf
     // public static GeneDef YourPrefix_YourGeneDefName;
 
     public static ThingDef GOG_Stampede_PawnFlyer;
+    public static SoundDef GOG_StrangeWalker;
 
     static GrimoireOfGrotesqueriesDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(GrimoireOfGrotesqueriesDefOf));
 }
