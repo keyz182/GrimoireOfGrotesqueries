@@ -40,7 +40,8 @@
             </li>
         </lifeStages>
         <combatPower>250</combatPower>
-        <abilities>
-        </abilities>
+        <!-- <abilities> -->
+        <!--     <li>GOG_ConsumeLimb</li> -->
+        <!-- </abilities> -->
     </PawnKindDef>
 </Defs>

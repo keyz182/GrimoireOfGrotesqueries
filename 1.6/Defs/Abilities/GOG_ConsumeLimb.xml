@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <AbilityDef>
+        <defName>GOG_ConsumeLimb</defName>
+        <label>consume limb</label>
+        <description>Consume the downed targets limbs.</description>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <ai_IsOffensive>true</ai_IsOffensive>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <label>consume limb</label>
+            <drawAimPie>True</drawAimPie>
+            <range>-1</range>
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupTime>2</warmupTime>
+            <targetParams>
+                <onlyTargetIncapacitatedPawns>true</onlyTargetIncapacitatedPawns>
+                <neverTargetIncapacitated>false</neverTargetIncapacitated>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetCorpses>false</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="GrimoireOfGrotesqueries.Comps.CompProperties_AbilityDestroyLimb">
+                <TargetGroups>
+                    <li>Arms</li>
+                    <li>Shoulders</li>
+                    <li>Hands</li>
+                    <li>Legs</li>
+                    <li>Feet</li>
+                </TargetGroups>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

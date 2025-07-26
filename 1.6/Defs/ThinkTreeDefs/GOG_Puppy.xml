@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThinkTreeDef>
+        <defName>GOG_Puppy</defName>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>Downed</treeDef>
+                </li>
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>BurningResponse</treeDef>
+                </li>
+
+                <!-- Lord directives -->
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>LordDuty</treeDef>
+                </li>
+
+                <!-- Escaping-->
+                <li Class="ThinkNodeConditional_EscapingHoldingPlatform">
+                    <subNodes>
+                        <li Class="JobGiver_EscapingHoldingPlatform" />
+                    </subNodes>
+                </li>
+
+
+                <!-- Insertion hook for modders -->
+                <li Class="ThinkNode_SubtreesByTag">
+                    <insertTag>GOG_Puppy_PreMain</insertTag>
+                </li>
+
+                <!-- ~1~ Consume leap a target @1@ -->
+                <!-- <li Class="JobGiver_AIAbilityFight"> -->
+                <!--     <targetAcquireRadius>65</targetAcquireRadius> -->
+                <!--     <targetKeepRadius>72</targetKeepRadius> -->
+                <!--     <ability>GOG_ConsumeLimb</ability> -->
+                <!-- </li> -->
+
+                <!-- React to close melee threat -->
+                <li Class="JobGiver_ReactToCloseMeleeThreat">
+                    <maxDistance>2.9</maxDistance>
+                </li>
+
+                <!-- Regular fight -->
+                <li Class="JobGiver_AIFightEnemies">
+                    <targetAcquireRadius>65</targetAcquireRadius>
+                    <targetKeepRadius>72</targetKeepRadius>
+                    <allowTurrets>false</allowTurrets>
+                </li>
+
+                <!-- Insertion hook for modders -->
+                <li Class="ThinkNode_SubtreesByTag">
+                    <insertTag>GOG_Puppy_PreWander</insertTag>
+                </li>
+
+                <li Class="JobGiver_WanderHerd">
+                    <maxDanger>Deadly</maxDanger>
+                    <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+                </li>
+
+                <li Class="JobGiver_IdleError"/>
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+
+    <ThinkTreeDef>
+        <defName>GOG_PuppyConstant</defName>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <!-- Despawned -->
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>Despawned</treeDef>
+                </li>
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+
+</Defs>

@@ -98,5 +98,9 @@
         <ReleaseFiles Update="..\..\Defs\Hediffs\GOG_Blinded.xml">
           <Link>GrimoireOfGrotesqueries\1.6\Defs\Hediffs\GOG_Blinded.xml</Link>
         </ReleaseFiles>
+
+        <ReleaseFiles Update="..\..\Defs\ThinkTreeDefs\GOG_Puppy.xml">
+          <Link>GrimoireOfGrotesqueries\1.6\Defs\ThinkTreeDefs\GOG_Puppy.xml</Link>
+        </ReleaseFiles>
     </ItemGroup>
 </Project>
