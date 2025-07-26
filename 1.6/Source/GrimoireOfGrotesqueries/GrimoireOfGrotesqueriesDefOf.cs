@@ -12,6 +12,7 @@ public static class GrimoireOfGrotesqueriesDefOf
 
     public static ThingDef GOG_Stampede_PawnFlyer;
     public static SoundDef GOG_StrangeWalker;
+    public static HediffDef GOG_CoveredInSlime;
 
     static GrimoireOfGrotesqueriesDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(GrimoireOfGrotesqueriesDefOf));
 }

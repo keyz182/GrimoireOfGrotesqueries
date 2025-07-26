@@ -101,6 +101,26 @@
     <ReleaseFiles Update="..\..\Defs\Sounds\GOG_Sounds.xml">
       <Link>GrimoireOfGrotesqueries\1.6\Defs\Sounds\GOG_Sounds.xml</Link>
     </ReleaseFiles>
+
+    <ReleaseFiles Update="..\..\Defs\Hediffs\GOG_Slime.xml">
+      <Link>GrimoireOfGrotesqueries\1.6\Defs\Hediffs\GOG_Stampede.xml</Link>
+    </ReleaseFiles>
+
+    <ReleaseFiles Update="..\..\Patches\PawnRenderTreeDefs\PawnRenderTreeDefs.xml">
+      <Link>GrimoireOfGrotesqueries\1.6\Patches\PawnRenderTreeDefs\PawnRenderTreeDefs.xml</Link>
+    </ReleaseFiles>
+
+    <ReleaseFiles Update="..\..\Defs\ThoughtDefs\GOG_Slime.xml">
+      <Link>GrimoireOfGrotesqueries\1.6\Defs\ThoughtDefs\GOG_Slime.xml</Link>
+    </ReleaseFiles>
+
+    <ReleaseFiles Update="..\..\Defs\Abilities\GOG_Charge.xml">
+      <Link>GrimoireOfGrotesqueries\1.6\Defs\Abilities\GOG_Charge.xml</Link>
+    </ReleaseFiles>
+
+    <ReleaseFiles Update="..\..\Defs\DamageDefs\GOG_Slime.xml">
+      <Link>GrimoireOfGrotesqueries\1.6\Defs\DamageDefs\GOG_Slime.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="..\..\..\Compatibility\">

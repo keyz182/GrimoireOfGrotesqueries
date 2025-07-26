@@ -117,10 +117,6 @@
                 <dropChance>0.25</dropChance>
             </li>
             <li MayRequire="keyz182.KeyzBossBars" Class="KeyzBossBars.CompProperties_BossBar">
-                <hediffname>KBB_BossBar</hediffname>
-                <hediffseverity>0.5</hediffseverity>
-            </li>
-            <li Class="GrimoireOfGrotesqueries.CompProperties_StrangeWalker">
             </li>
         </comps>
         <tools>
@@ -130,8 +126,16 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>12</power> <!-- Quite intense, might need reduction -->
-                <cooldownTime>2</cooldownTime>
+                <power>8</power> <!-- Quite intense, might need reduction -->
+                <cooldownTime>1.5</cooldownTime>
+                <hediff>GOG_CoveredInSlime</hediff>
+                <extraMeleeDamages>
+                    <li>
+                        <def>GOG_Slimed</def>
+                        <amount>1</amount>
+                        <chance>0.5</chance>
+                    </li>
+                </extraMeleeDamages>
                 <linkedBodyPartsGroup>LeftAppendage</linkedBodyPartsGroup>
                 <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
             </li>
@@ -141,8 +145,15 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>12</power> <!-- Quite intense, might need reduction -->
-                <cooldownTime>2</cooldownTime>
+                <power>8</power> <!-- Quite intense, might need reduction -->
+                <cooldownTime>1.5</cooldownTime>
+                <extraMeleeDamages>
+                    <li>
+                        <def>GOG_Slimed</def>
+                        <amount>1</amount>
+                        <chance>0.5</chance>
+                    </li>
+                </extraMeleeDamages>
                 <linkedBodyPartsGroup>RightAppendage</linkedBodyPartsGroup>
                 <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
             </li>

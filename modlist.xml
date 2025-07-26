@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-	<version>1.6.4518 rev84</version>
+	<version>1.6.4528 rev1222</version>
 	<activeMods>
 		<li>brrainz.harmony</li>
 		<li>ludeon.rimworld</li>
@@ -10,8 +10,8 @@
 		<li>ludeon.rimworld.anomaly</li>
 		<li>ludeon.rimworld.odyssey</li>
 		<li>keyz182.keyzmiscresources</li>
-		<li>keyz182.keyzbossbars</li>
 		<li>oskarpotocki.vanillafactionsexpanded.core</li>
+		<li>keyz182.keyzbossbars</li>
 		<li>keyz182.grimoireofgrotesqueries</li>
 	</activeMods>
 	<knownExpansions>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PawnRenderTreeDef[defName="Humanlike"]/root/children</xpath>
+        <value>
+            <li Class="PawnRenderNodeProperties_Overlay">
+                <debugLabel>Slime</debugLabel>
+                <workerClass>GrimoireOfGrotesqueries.Rendering.PawnRenderNodeWorker_OverlaySlime</workerClass>
+                <overlayLayer>Body</overlayLayer>
+                <baseLayer>45</baseLayer>
+            </li>
+        </value>
+    </Operation>
+</Patch>

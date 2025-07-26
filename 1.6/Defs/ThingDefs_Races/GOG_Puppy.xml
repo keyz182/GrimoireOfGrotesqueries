@@ -22,7 +22,7 @@
         <tradeability>None</tradeability>
         <race>
             <deathAction>
-                <workerClass>AnimalBehaviours.DeathActionWorker_DropOnDeath</workerClass>
+                <workerClass>VEF.AnimalBehaviours.DeathActionWorker_DropOnDeath</workerClass>
             </deathAction>
             <baseHealthScale>3</baseHealthScale>
             <body>QuadrupedAnimalWithPaws</body>
@@ -43,7 +43,7 @@
                 <li>
                 <def>EntityFullyFormed</def>
                 <soundCall>Pawn_Chimera_Call</soundCall>            <!--Will need custom-->
-                <soundWounded>Pawn_Chimera_Wounded</soundWounded>           
+                <soundWounded>Pawn_Chimera_Wounded</soundWounded>
                 <soundDeath>Pawn_Chimera_Death</soundDeath>
                 </li>
             </lifeStageAges>
@@ -143,7 +143,7 @@
         <li Class="CompProperties_HoldingPlatformTarget">
             <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
         </li>
-        
+
         <li Class="CompProperties_AttachPoints">
             <points>
             <li>

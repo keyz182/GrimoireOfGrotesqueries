@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>GOG_SlimeThought</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <stages>
+            <li>
+                <label>eww, slime</label>
+                <description>I'm covered in horrendous slime, it's hard to move. I feel sick.</description>
+                <baseMoodEffect>-30</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

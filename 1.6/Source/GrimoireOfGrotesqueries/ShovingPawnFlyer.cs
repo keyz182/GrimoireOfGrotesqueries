@@ -51,6 +51,15 @@ public class ShovingPawnFlyer: PawnFlyer
         return true;
     }
 
+    protected override void RespawnPawn()
+    {
+        base.RespawnPawn();
+        if (FlyingThing is Pawn { stances.stunner: not null } pawn)
+        {
+            pawn.stances.stunner.StunFor(600, null);
+        }
+    }
+
     protected override void Tick()
     {
         base.Tick();
