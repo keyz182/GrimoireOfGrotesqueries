@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <DamageDef Name="Stun" ParentName="StunBase">
+        <defName>GOG_Blind</defName>
+        <label>blind</label>
+        <workerClass>GrimoireOfGrotesqueries.DamageWorkers.DamageWorker_Blinded</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been blinded to death?</deathMessage>
+        <defaultDamage>0</defaultDamage>
+        <combatLogRules>GOG_Blind</combatLogRules>
+    </DamageDef>
+
+    <RulePackDef>
+        <defName>GOG_Blind</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>damaged_past->blinded</li>
+                <li>destroyed_past->damaged_past</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+</Defs>

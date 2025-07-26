@@ -1,41 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <OutputType>Library</OutputType>
-    <LangVersion>latest</LangVersion>
-    <RootNamespace>GrimoireOfGrotesqueries</RootNamespace>
-    <AssemblyName>GrimoireOfGrotesqueries</AssemblyName>
-    <OutputPath>../../Assemblies/</OutputPath>
-    <ZipFilePath>../../../$(AssemblyName).zip</ZipFilePath>
-    <ReleasePath>../../../Release</ReleasePath>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <SteamModsPath>$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <Optimize>false</Optimize>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>none</DebugType>
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>../../../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>../../../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>../../../../../RimWorldWin64_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <OutputType>Library</OutputType>
+        <LangVersion>latest</LangVersion>
+        <RootNamespace>GrimoireOfGrotesqueries</RootNamespace>
+        <AssemblyName>GrimoireOfGrotesqueries</AssemblyName>
+        <OutputPath>../../Assemblies/</OutputPath>
+        <ZipFilePath>../../../$(AssemblyName).zip</ZipFilePath>
+        <ReleasePath>../../../Release</ReleasePath>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <SteamModsPath>$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <Optimize>false</Optimize>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>none</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+        <Optimize>true</Optimize>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>../../../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>../../../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+            <HintPath>../../../../../RimWorldWin64_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
 
         <Reference Include="VEF">
             <HintPath Condition="Exists('../../../../VanillaExpandedFramework/1.6/Assemblies/VEF.dll')">../../../../VanillaExpandedFramework/1.6/Assemblies/VEF.dll</HintPath>
@@ -65,66 +66,37 @@
             <HintPath Condition="Exists('../../../../../../../../workshop/content/294100/2023507013/1.6/Assemblies/KCSG.dll')">../../../../../../../../workshop/content/294100/2023507013/1.6/Assemblies/KCSG.dll</HintPath>
             <Private>False</Private>
         </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Condition="Exists('../../../../../Data')" Include="../../../../../Data/**/*">
-      <Link>Attached/Rimworld/%(RecursiveDir)/%(FileName)%(Extension)</Link>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-  </ItemGroup>
+    </ItemGroup>
     <ItemGroup>
-    <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime"/>
-  </ItemGroup>
+        <Content Condition="Exists('../../../../../Data')" Include="../../../../../Data/**/*">
+            <Link>Attached/Rimworld/%(RecursiveDir)/%(FileName)%(Extension)</Link>
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
+    </ItemGroup>
 
-  <ItemGroup Condition="'@(Reference->WithMetadataValue('Identity', 'Assembly-CSharp')->Metadata('HintPath')->Exists())' == ''">
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6-*"/>
-  </ItemGroup>
-  <PropertyGroup>
-    <StartAction>Program</StartAction>
-    <StartProgram>$(SolutionDir)../../../../RimWorldWin64.exe</StartProgram>
-  </PropertyGroup>
-  <ItemGroup>
-    <ReleaseFiles Include="../../../1.*/**" Exclude="../../../1.*/Source/**" />
-    <AboutFiles Include="../../../About/**" Exclude="../../../About/*.png~"/>
-    <CommonFiles Include="../../../Common/**" />
-    <CompatibilityFiles Include="../../../Compatibility/**" />
+    <ItemGroup Condition="'@(Reference->WithMetadataValue('Identity', 'Assembly-CSharp')->Metadata('HintPath')->Exists())' == ''">
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6-*" />
+    </ItemGroup>
+    <PropertyGroup>
+        <StartAction>Program</StartAction>
+        <StartProgram>$(SolutionDir)../../../../RimWorldWin64.exe</StartProgram>
+    </PropertyGroup>
+    <ItemGroup>
+        <ReleaseFiles Include="../../../1.6/**" Exclude="../../../1.6/Source/**" />
+        <AboutFiles Include="../../../About/**" Exclude="../../../About/*.png~" />
+        <CommonFiles Include="../../../Common/**" />
+        <CompatibilityFiles Include="../../../Compatibility/**" />
 
-    <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md" />
+        <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md" />
 
-    <ReleaseFiles Update="..\..\Defs\Effects\GOG_Motes.xml">
-      <Link>GrimoireOfGrotesqueries\1.6\Defs\Effects\GOG_Motes.xml</Link>
-    </ReleaseFiles>
-
-    <ReleaseFiles Update="..\..\Defs\Sounds\GOG_Sounds.xml">
-      <Link>GrimoireOfGrotesqueries\1.6\Defs\Sounds\GOG_Sounds.xml</Link>
-    </ReleaseFiles>
-
-    <ReleaseFiles Update="..\..\Defs\Hediffs\GOG_Slime.xml">
-      <Link>GrimoireOfGrotesqueries\1.6\Defs\Hediffs\GOG_Stampede.xml</Link>
-    </ReleaseFiles>
-
-    <ReleaseFiles Update="..\..\Patches\PawnRenderTreeDefs\PawnRenderTreeDefs.xml">
-      <Link>GrimoireOfGrotesqueries\1.6\Patches\PawnRenderTreeDefs\PawnRenderTreeDefs.xml</Link>
-    </ReleaseFiles>
-
-    <ReleaseFiles Update="..\..\Defs\ThoughtDefs\GOG_Slime.xml">
-      <Link>GrimoireOfGrotesqueries\1.6\Defs\ThoughtDefs\GOG_Slime.xml</Link>
-    </ReleaseFiles>
-
-    <ReleaseFiles Update="..\..\Defs\Abilities\GOG_Charge.xml">
-      <Link>GrimoireOfGrotesqueries\1.6\Defs\Abilities\GOG_Charge.xml</Link>
-    </ReleaseFiles>
-
-    <ReleaseFiles Update="..\..\Defs\DamageDefs\GOG_Slime.xml">
-      <Link>GrimoireOfGrotesqueries\1.6\Defs\DamageDefs\GOG_Slime.xml</Link>
-    </ReleaseFiles>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="..\..\..\Compatibility\">
-      <Link>GrimoireOfGrotesqueries\Compatibility</Link>
-    </Folder>
-  </ItemGroup>
+        <ReleaseFiles Update="..\..\Defs\Hediffs\GOG_Blinded.xml">
+          <Link>GrimoireOfGrotesqueries\1.6\Defs\Hediffs\GOG_Blinded.xml</Link>
+        </ReleaseFiles>
+    </ItemGroup>
 </Project>

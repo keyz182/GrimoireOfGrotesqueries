@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <ThingDef ParentName="HatMakeableBase" Name="CowboyHat">
+        <defName>GOG_Olecranon_Masque</defName>
+        <label>Olecranon Masque</label>
+        <description>Broken down legs of a Stampede, reshaped into a Masque. Without the slimey mucus used to maintain the protective coating of the formerly ashy color, the bones have oxidized purple and are no longer brittle. The odd energy emanating from this item seems to make the wearer occasionally faster.</description>
+        <possessionCount>1</possessionCount>
+        <recipeMaker>
+            <researchPrerequisite>ComplexClothing</researchPrerequisite>
+            <displayPriority>100</displayPriority>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Apparel/Headwear/GOG_Olecranon_Masque</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.9, 0.9)</drawSize>
+        </graphicData>
+        <costList>
+            <Cloth>120</Cloth>
+            <WoodLog>20</WoodLog>
+        </costList>
+        <stuffCategories Inherit="False"/>
+        <comps Inherit="False">
+            <li Class="CompProperties_Forbiddable" />
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <WorkToMake>1800</WorkToMake>
+            <Mass>0.5</Mass>
+            <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <MeleeDodgeChance>0.75</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Apparel/Headwear/GOG_Olecranon_Masque</wornGraphicPath>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <tags>
+                <li>Horaxian</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Worker</li>
+            </defaultOutfitTags>
+            <renderSkipFlags>
+                <li>None</li>
+            </renderSkipFlags>
+            <drawData>
+                <dataNorth>
+                    <layer>-3</layer>
+                </dataNorth>
+            </drawData>
+            <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+            <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+            <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        </apparel>
+        <tradeTags>
+            <li>Clothing</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>

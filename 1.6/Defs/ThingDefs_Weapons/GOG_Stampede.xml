@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Defs>
+    <ThingDef ParentName="MeleeWeaponUltratech">
+        <defName>GOG_Flayed_Warhammer</defName>
+        <label>Flayed Warhammer</label>
+        <description>A Stampede's decapitated head affixed to a warhammer handle. It has inexplicably melded with the material used to make it, and now runes are inscribed onto it on all sides, of varying sizes. It's indecipherable.</description>
+        <soundInteract>Interact_ZeusHammer</soundInteract>
+        <meleeHitSound>MeleeHit_ZeusHammer</meleeHitSound>
+        <equippedAngleOffset>-55</equippedAngleOffset>
+        <smeltable>false</smeltable>
+        <weaponClasses>
+            <li>MeleeBlunt</li>
+        </weaponClasses>
+        <statBases>
+            <WorkToBuild>2800</WorkToBuild>
+            <Mass>2</Mass>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/GOG_Flayed_Warhammer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costList>
+            <GOG_Mace_Head>1</GOG_Mace_Head>
+            <GOG_Ochres>5</GOG_Ochres>
+        </costList>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Bioferrite</li>
+        </stuffCategories>
+        <costStuffCount>80</costStuffCount>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>head</label>
+                <labelUsedInLogging>false</labelUsedInLogging>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>35</power>
+                <cooldownTime>3</cooldownTime>
+                <extraMeleeDamages>
+                    <li>
+                        <def>GOG_Blind</def>
+                        <amount>1</amount>
+                    </li>
+                </extraMeleeDamages>
+            </li>
+        </tools>
+    </ThingDef>
+</Defs>
